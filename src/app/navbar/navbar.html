@@ -1,0 +1,23 @@
+
+<div class="section group">
+
+  <div class="col span_1_of_2">
+    <div class="col-xs-2">
+    </div>
+  </div>
+
+  <div class="col span_2_of_2">
+    <div class="col-xs-10 text-right menu-1">
+      <ul>
+        <li *ngFor="let nav of navList" class="dropdown">
+          <a class="az_001" (click)="selectNav(nav)"href="javascript:void(0)">{{nav.name}}
+            <div class="dropdown-content">
+              <a *ngFor="let childNav of nav.childNavList" class="az_001" (click)="selectNav(childNav)">{{childNav.name}}</a>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+</div>
