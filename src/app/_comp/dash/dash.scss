@@ -4,9 +4,9 @@
     top: 0px;
     left: 0;
     right: 0;
-    height: 375px;
+    height: 475px;
     width: 100%;
-    // background-image: url(http://localhost:4200/assets/wedPic.jpeg);
+    background-image: url(http://localhost:4200/assets/pic001.png);
     background-color: black;
     background-size: cover;                     
     background-repeat: no-repeat;
@@ -41,8 +41,7 @@
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
-    font-family: 'Lato', sans-serif;
-    
+    font-family: 'Lato', sans-serif;   
 }
 a:visited {
     color: #ecd2a1;

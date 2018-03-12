@@ -1,22 +1,62 @@
+//core stuff
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
 //import comps
-import {NavbarComp} from './navbar/navbar.comp'
-import {DashComp} from './dash/dash.comp'
-import {DoomCounterComp} from './dash/doomCounter/doomCounter.comp'
+import { NavbarComp } from './_comp/navbar/navbar.comp'
+
+import { DashComp } from './_comp/dash/dash.comp'
+import { DoomCounterComp } from './_comp/dash/doomCounter/doomCounter.comp'
+
+import { MoreInfoComp } from './_comp/moreInfo/moreInfo.comp'
+import { PiczComp } from './_comp/picz/picz.comp'
+import { ContactComp } from './_comp/contact/contact.comp'
+import { _404Comp } from './_comp/_404/_404.comp'
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComp,
     DashComp,
-    DoomCounterComp
+    DoomCounterComp,
+    MoreInfoComp,
+    ContactComp,
+    PiczComp,
+    _404Comp
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        redirectTo: '/dash',
+        pathMatch: 'full'
+      },
+      {
+        path: 'dash',
+        component: DashComp
+      },
+      {
+        path: 'moreInfo',
+        component: MoreInfoComp
+      },
+      {
+        path: 'picz',
+        component: PiczComp
+      },
+      {
+        path: 'contact',
+        component: ContactComp
+      },
+      { 
+        path: '**', 
+        component: _404Comp,
+      }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
