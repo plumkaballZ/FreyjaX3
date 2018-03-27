@@ -2,7 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
+import { HttpModule, XHRBackend, RequestOptions, Http } from '@angular/http';
 import { AppComponent } from './app.component';
 
 //import comps
@@ -15,6 +15,9 @@ import { MoreInfoComp } from './_comp/moreInfo/moreInfo.comp'
 import { PiczComp } from './_comp/picz/picz.comp'
 import { ContactComp } from './_comp/contact/contact.comp'
 import { _404Comp } from './_comp/_404/_404.comp'
+
+import { WebShooter } from './_service/SpiderMan'
+
 
 
 @NgModule({
@@ -30,6 +33,7 @@ import { _404Comp } from './_comp/_404/_404.comp'
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -58,7 +62,9 @@ import { _404Comp } from './_comp/_404/_404.comp'
       }
     ])
   ],
-  providers: [],
+  providers: [
+    WebShooter
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

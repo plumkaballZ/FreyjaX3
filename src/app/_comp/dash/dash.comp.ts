@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { WebShooter } from './../../_service/SpiderMan'
+import { userzCtrll, IronWebRequest } from './../../_service/IronSpiderArmor'
 
 @Component({
     selector: 'dashComp',
@@ -7,6 +9,10 @@ import { Component } from '@angular/core';
   })
   
   export class DashComp{
-      constructor(){
+
+      constructor(webShooter : WebShooter){
+        webShooter.get(new userzCtrll()).subscribe(data => {});
+        webShooter.post(new userzCtrll(), new IronWebRequest('asdf')).subscribe(data => {});
+        webShooter.put(new userzCtrll(), new IronWebRequest('asdf')).subscribe(data => {});
       }
   }

@@ -1,50 +1,76 @@
 import { Injectable } from "@angular/core";
 import { Headers, Http, RequestOptions, RequestOptionsArgs, } from "@angular/http";
 import { Observable } from 'rxjs/Observable';
-import "rxjs/add/operator/toPromise";
+import { webCtrll, IronWebRequest} from './IronSpiderArmor';
+
 
  @Injectable()
- export class WebShooter {
-     constructor(private http: Http) {
-     }
+ export class WebShooter
+ {
+    constructor(private http: Http) {
+    }
 
-    get(url: string, options?: RequestOptionsArgs): Observable<any> {
-         this.requestInterceptor();
-         return this.http.get(this.getFullUrl(url), this.requestOptions(options))
-            .catch(this.onCatch.bind(this))
-            .do((res: Response) => {}, (error: any) => {})
-            .finally(() => {});
-    }
-    post(url: string, body: any, options?: RequestOptionsArgs): Observable<any> {
+    get(controller: webCtrll, options?: RequestOptionsArgs): Observable<any> {
         this.requestInterceptor();
-        return this.http.post(this.getFullUrl(url), body, this.requestOptions(options))
+
+        return this.http.get(controller.generateUrl(), this.requestOptions(options))
             .catch(this.onCatch.bind(this))
-            .do((res: Response) => {}, (error: any) => {})
-            .finally(() => {});
-    }
-    put(url: string, body: any, options?: RequestOptionsArgs): Observable<any> {
+            .do((res: any) => { console.log('do') }, (error: any) => { console.log('error') })
+            .map((res: any) =>  {
+                return res.json();
+              })
+            .finally(() => {
+            }); 
+        }
+
+    post(controller: webCtrll, irnWebReq: IronWebRequest, options?: RequestOptionsArgs): Observable<any> {
+        
         this.requestInterceptor();
-        return this.http.put(this.getFullUrl(url), body, this.requestOptions(options))
-            .catch(this.onCatch.bind(this))
-            .do((res: Response) => {}, (error: any) => {})
-            .finally(() => {});
-    }
-    delete(url: string, options?: RequestOptionsArgs): Observable<any> {
+
+        let body = JSON.stringify(irnWebReq);
+
+        return this.http.post(controller.generateUrl(), body, this.requestOptions(options))
+        .catch(this.onCatch.bind(this))
+        .do((res: any) => { console.log('do') }, (error: any) => { console.log('error') })
+        .map((res: any) =>  {
+            return res.json();
+          })
+        .finally(() => {
+        });
+        }
+
+    put(controller: webCtrll, irnWebReq: IronWebRequest, options?: RequestOptionsArgs): Observable<any> {
+        
         this.requestInterceptor();
-        return this.http.delete(this.getFullUrl(url), this.requestOptions(options))
+
+        let body = JSON.stringify(irnWebReq);
+
+        return this.http.put(controller.generateUrl(), body, this.requestOptions(options))
+        .catch(this.onCatch.bind(this))
+        .do((res: any) => { console.log('do') }, (error: any) => { console.log('error') })
+        .map((res: any) =>  {
+            return res.json();
+          })
+        .finally(() => {
+        });
+    }
+    
+    delete(controller: webCtrll, options?: RequestOptionsArgs): Observable<any> {
+        this.requestInterceptor();
+        return this.http.delete(controller.generateUrl(), this.requestOptions(options))
             .catch(this.onCatch.bind(this))
             .do((res: Response) => {}, (error: any) => {})
             .finally(() => {});
-    }
+        }
+
     private requestInterceptor(): void {
     }
+
     private onCatch(error: any, caught: Observable<any>): Observable<any> {
         return Observable.of(error);        
     }
-    private getFullUrl(url: string): string {
-        return '';
-    }
     private requestOptions(options?: RequestOptionsArgs): RequestOptionsArgs {
+        
         if (options == null) {
             options = new RequestOptions();
         }
@@ -52,8 +78,7 @@ import "rxjs/add/operator/toPromise";
         if (options.headers == null) {
             const user = localStorage.getItem('user') != "undefined" ? JSON.parse(localStorage.getItem('user')) : null;
             options.headers = new Headers({
-                'Content-Type': 'application/json',
-                'X-Spree-Token': user && user.spree_api_key
+                'Content-Type': 'application/json'
               });
         }
 
