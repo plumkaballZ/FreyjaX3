@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { WebShooter } from './../../_service/SpiderMan'
-import { userzCtrll, IronWebRequest } from './../../_service/IronSpiderArmor'
+import { warpCtrll, warpWebRequest } from './../../_service/IronSpiderArmor'
+import { userLogin } from './../../_model/userLogin'
+import { userLoginManager } from './../../_logic/auth/userLoginManager';
 
 @Component({
     selector: 'dashComp',
@@ -8,11 +10,8 @@ import { userzCtrll, IronWebRequest } from './../../_service/IronSpiderArmor'
     styleUrls: ['./dash.scss']
   })
   
-  export class DashComp{
-
-      constructor(webShooter : WebShooter){
-        webShooter.get(new userzCtrll()).subscribe(data => {});
-        webShooter.post(new userzCtrll(), new IronWebRequest('asdf')).subscribe(data => {});
-        webShooter.put(new userzCtrll(), new IronWebRequest('asdf')).subscribe(data => {});
-      }
+  export class DashComp {
+    constructor(webShooter : WebShooter) {
+      
+    }
   }

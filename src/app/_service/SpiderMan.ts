@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Headers, Http, RequestOptions, RequestOptionsArgs, } from "@angular/http";
 import { Observable } from 'rxjs/Observable';
-import { webCtrll, IronWebRequest} from './IronSpiderArmor';
+import { webCtrll, warpWebRequest} from './IronSpiderArmor';
 
 
  @Injectable()
@@ -10,8 +10,10 @@ import { webCtrll, IronWebRequest} from './IronSpiderArmor';
     constructor(private http: Http) {
     }
 
-    get(controller: webCtrll, options?: RequestOptionsArgs): Observable<any> {
+    get(controller: webCtrll, warpRequest: warpWebRequest,options?: RequestOptionsArgs): Observable<any> {
         this.requestInterceptor();
+        
+        options = { params: { jsonData:  warpRequest.convertToJson() } };
 
         return this.http.get(controller.generateUrl(), this.requestOptions(options))
             .catch(this.onCatch.bind(this))
@@ -23,11 +25,11 @@ import { webCtrll, IronWebRequest} from './IronSpiderArmor';
             }); 
         }
 
-    post(controller: webCtrll, irnWebReq: IronWebRequest, options?: RequestOptionsArgs): Observable<any> {
-        
+    post(controller: webCtrll, warpRequest: warpWebRequest, options?: RequestOptionsArgs): Observable<any> {
+
         this.requestInterceptor();
 
-        let body = JSON.stringify(irnWebReq);
+        let body = JSON.stringify(warpRequest);
 
         return this.http.post(controller.generateUrl(), body, this.requestOptions(options))
         .catch(this.onCatch.bind(this))
@@ -39,11 +41,11 @@ import { webCtrll, IronWebRequest} from './IronSpiderArmor';
         });
         }
 
-    put(controller: webCtrll, irnWebReq: IronWebRequest, options?: RequestOptionsArgs): Observable<any> {
+    put(controller: webCtrll, warpRequest: warpWebRequest, options?: RequestOptionsArgs): Observable<any> {
         
         this.requestInterceptor();
 
-        let body = JSON.stringify(irnWebReq);
+        let body = JSON.stringify(warpRequest);
 
         return this.http.put(controller.generateUrl(), body, this.requestOptions(options))
         .catch(this.onCatch.bind(this))
@@ -82,6 +84,8 @@ import { webCtrll, IronWebRequest} from './IronSpiderArmor';
               });
         }
 
+        console.log('options:');
+        console.log(options);
         return options;
     }
 }

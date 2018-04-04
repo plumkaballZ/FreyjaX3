@@ -15,9 +15,14 @@ import { MoreInfoComp } from './_comp/moreInfo/moreInfo.comp'
 import { PiczComp } from './_comp/picz/picz.comp'
 import { ContactComp } from './_comp/contact/contact.comp'
 import { _404Comp } from './_comp/_404/_404.comp'
+import { LoginComp } from './_comp/login/login.comp'
 
+//import services
 import { WebShooter } from './_service/SpiderMan'
 
+//import logics
+import { authGuard } from './_logic/auth/authGuard'
+import { anonGuard } from './_logic/auth/anonGuard'
 
 
 @NgModule({
@@ -29,12 +34,18 @@ import { WebShooter } from './_service/SpiderMan'
     MoreInfoComp,
     ContactComp,
     PiczComp,
-    _404Comp
+    _404Comp,
+    LoginComp
   ],
   imports: [
     BrowserModule,
     HttpModule,
     RouterModule.forRoot([
+      {
+        path: 'login',
+        component: LoginComp,
+        canActivate: [anonGuard]
+      },
       {
         path: '',
         redirectTo: '/dash',
@@ -42,19 +53,23 @@ import { WebShooter } from './_service/SpiderMan'
       },
       {
         path: 'dash',
-        component: DashComp
+        component: DashComp,
+        canActivate: [authGuard]
       },
       {
         path: 'moreInfo',
-        component: MoreInfoComp
+        component: MoreInfoComp,
+        canActivate: [authGuard]
       },
       {
         path: 'picz',
-        component: PiczComp
+        component: PiczComp,
+        canActivate: [authGuard]
       },
       {
         path: 'contact',
-        component: ContactComp
+        component: ContactComp,
+        canActivate: [authGuard]
       },
       { 
         path: '**', 
@@ -63,7 +78,9 @@ import { WebShooter } from './_service/SpiderMan'
     ])
   ],
   providers: [
-    WebShooter
+    WebShooter,
+    authGuard,
+    anonGuard
   ],
   bootstrap: [AppComponent]
 })
