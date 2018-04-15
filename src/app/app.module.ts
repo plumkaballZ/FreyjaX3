@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpModule, XHRBackend, RequestOptions, Http } from '@angular/http';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 //import comps
 import { NavbarComp } from './_comp/navbar/navbar.comp'
@@ -39,6 +40,7 @@ import { anonGuard } from './_logic/auth/anonGuard'
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpModule,
     RouterModule.forRoot([
       {
