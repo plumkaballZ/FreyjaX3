@@ -1,27 +1,82 @@
-.overlay_Div{
-    z-index: 0;
-    bottom: 0;
-    top: 0px;
-    left: 0;
-    right: 0;
-    height: 475px;
-    width: 100%;
-    background-image: url(https://freyjax3-e0639.firebaseapp.com/assets/pic001.png);
-    background-color: black;
-    background-size: cover;                     
-    background-repeat: no-repeat;
-    background-position: inherit; 
-}
-.center_Div{
-    padding-top: 60px;
-    text-align: center;
-    display: table;
-    margin: 10px auto;
-}
-.p_001{
+// .overlay_Div{
+//     z-index: 0;
+//     bottom: 0;
+//     top: 0px;
+//     left: 0;
+//     right: 0;
+//     height: 475px;
+//     width: 100%;
+//     background-image: url(https://freyjax3-e0639.firebaseapp.com/assets/pic001.png);
+//     background-color: black;
+//     background-size: cover;                     
+//     background-repeat: no-repeat;
+//     background-position: inherit; 
+// }
+// .center_Div{
+//     padding-top: 60px;
+//     text-align: center;
+//     display: table;
+//     margin: 10px auto;
+// }
+// .p_001{
+//     margin-top: 60px;
+// }
+
+// a:visited {
+//     color: #ecd2a1;
+// }
+// .date_picker_div{
+//     top: 0.9em;
+//     left: -46px;
+// }
+// .section {
+//     text-align: center;
+// 	clear: both;
+// 	padding: 0px;
+//     margin: 0px;
+//     min-height: calc(40vh - 60px);
+//     background:#2b3746;
+//     font-family: 'Satisfy', cursive;
+//     font-size: 30px;
+//     .secDiv{
+//         font-family: 'Lato', sans-serif;
+//         font-size: 20px;
+//     }
+//     .h2_z{
+//         font-family: 'Lato', sans-serif;
+//         font-size: 35px;
+//     }
+// }
+// .col {
+// 	display: block;
+// 	float:left;
+// 	margin: 0% 0 1% 6%;
+// }
+// .col:first-child { margin-left: 0; }
+
+// .group:before,
+// .group:after { content:""; display:table; }
+// .group:after { clear:both;}
+// .group { zoom:1;}
+
+// .span_3_of_3 { width: 100%; }
+// .span_2_of_3 { width: 64.66%; }
+// .span_1_of_3 { width: 29.33%; }
+
+// .div_maps{
+//     margin-top: 40px;
+//     margin-left: 21px;
+//     border: 1px;
+// }
+// .div2_maps{
+//     margin-top: 40px;
+//     margin-left: 15px;   
+// }
+
+.pContact{
     margin-top: 60px;
 }
-.contact_Btn{
+.contactBtn{
     text-decoration: none;
     margin: 20px;
     padding: 15px 20px;
@@ -41,55 +96,36 @@
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
-    font-family: 'Lato', sans-serif;   
-}
-a:visited {
+    font-family: 'Lato', sans-serif;
     color: #ecd2a1;
 }
-.date_picker_div{
+
+.doomCenter {
+    padding-top: 60px;
+    text-align: center;
+    display: table;
+    margin: 10px auto;
+    color: #ecd2a1;
+}
+.datePicker{
     top: 0.9em;
     left: -46px;
+    background: #000;
+    color: white;
 }
-.section {
-    text-align: center;
-	clear: both;
-	padding: 0px;
-    margin: 0px;
-    min-height: calc(40vh - 60px);
-    background:#2b3746;
-    font-family: 'Satisfy', cursive;
-    font-size: 30px;
-    .secDiv{
-        font-family: 'Lato', sans-serif;
-        font-size: 20px;
-    }
-    .h2_z{
-        font-family: 'Lato', sans-serif;
-        font-size: 35px;
-    }
+@media (min-width: 700px) {
+ .leading {
+    align-items: center;
+  }
 }
-.col {
-	display: block;
-	float:left;
-	margin: 0% 0 1% 6%;
+.leading {
+  height: 480px;
+  margin-bottom: 30px;
+  padding: 30px;
+  background: url('https://freyjax3-e0639.firebaseapp.com/assets/pic001.png') center #333 no-repeat;
+  background-size: cover;
+  text-shadow: 0px 0px 5px #000;
 }
-.col:first-child { margin-left: 0; }
-
-.group:before,
-.group:after { content:""; display:table; }
-.group:after { clear:both;}
-.group { zoom:1;}
-
-.span_3_of_3 { width: 100%; }
-.span_2_of_3 { width: 64.66%; }
-.span_1_of_3 { width: 29.33%; }
-
-.div_maps{
-    margin-top: 40px;
-    margin-left: 21px;
-    border: 1px;
-}
-.div2_maps{
-    margin-top: 40px;
-    margin-left: 15px;   
+.secRow{
+     color: #ecd2a1;
 }

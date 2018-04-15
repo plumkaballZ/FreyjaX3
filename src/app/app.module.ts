@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { HttpModule, XHRBackend, RequestOptions, Http } from '@angular/http';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //import comps
 import { NavbarComp } from './_comp/navbar/navbar.comp'
@@ -25,6 +26,11 @@ import { WebShooter } from './_service/SpiderMan'
 import { authGuard } from './_logic/auth/authGuard'
 import { anonGuard } from './_logic/auth/anonGuard'
 
+'matdatepciker ffs'
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+
+
 
 @NgModule({
   declarations: [
@@ -39,9 +45,14 @@ import { anonGuard } from './_logic/auth/anonGuard'
     LoginComp
   ],
   imports: [
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule,
     BrowserModule,
     FormsModule,
     HttpModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([
       {
         path: 'login',
@@ -76,7 +87,7 @@ import { anonGuard } from './_logic/auth/anonGuard'
       { 
         path: '**', 
         component: _404Comp,
-      }
+      },
     ])
   ],
   providers: [

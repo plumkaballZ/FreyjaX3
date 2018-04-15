@@ -1,74 +1,33 @@
 
-<!-- <div style="text-align:center">
-  <h1>
-    MarenOgErvin.dk
-  </h1>
+<div class="row">
+    <h1 class="h_1">MarenOgErvin.dk</h1>
 </div>
-  
-<div class="loginDiv" style="text-align:center">
-    <input[(ngModel)]="_id" placeholder="brugernavn"/>
-    <input type="_password" (keydown.enter)="loginEvent()" [(ngModel)]="_password" placeholder="adgangskode"/>
-    <button class="loginBtn" (click)="loginEvent()">Login</button>
-    <div class="alert alert-danger" *ngIf="loginFailed">Could not login :(</div>
-</div> -->
-
-<table>
-  <tbody>
-    <tr>
-      <td style="text-align: center; vertical-align: middle;">
-        <main role="main">
-          <div class="login-box login-container loaded" style="">
-            <form action="/" id="login-form" method="post" novalidate="novalidate">        <div class="clearfix"></div>
-              <input name="__RequestVerificationToken" type="hidden" value="BTSA6zJld88lkL2bhsRk5uU16-Y8u9M6Q35gTfNykBPu75-NqXiB4Fhd3AqkJrzlGH8ROh4AMEG6TmKnepFRJ50oRs6cVx-2GYcmpUJiOKQ1">        <div class="row">
-            <div id="Errors" class="xs-pt-6">
+<div class="row">
+    <div class="loginBox loginContainer">
+    <div class="clearfix"></div>
+      
+            <div id="Errors" class="xs-pt-6"></div>
+             
+            <div class="form-group">
+                <input [(ngModel)]="_id" placeholder="Brugernavn" type="text"/>
             </div>
-            <div class="form-group form-group__label-hover">
-                <input class="form-control" data-val="true" data-val-length="This field cannot be more than 6 characters long" data-val-length-max="6" data-val-regex="This field may only contain numbers" data-val-regex-pattern="[0-9]+" data-val-required="Store number is required" id="ClientID" name="ClientID" placeholder="Store number" type="text" value="">
-                <label for="ClientID" class="show">Store number</label>
-                <span class="field-validation-valid text-warning help-inline" data-valmsg-for="ClientID" data-valmsg-replace="true"></span>
+            
+            <div class="form-group">
+                <input type="_password" (keydown.enter)="loginEvent()" [(ngModel)]="_password" placeholder="Adgangskode" type="password"/>
             </div>
-            <div class="form-group form-group__label-hover">
-                <input class="form-control" data-val="true" data-val-length="This field may not be more 10 characters" data-val-length-max="10" data-val-required="User name is required" id="Initials" name="Initials" placeholder="User name" type="text" value="">
-                <label for="Initials" class="show">User name</label>
-                <span class="field-validation-valid text-warning help-inline" data-valmsg-for="Initials" data-valmsg-replace="true"></span>
-            </div>
-            <div class="form-group form-group__label-hover">
-                <input class="form-control" data-val="true" data-val-length="This field may not be more than 100 characters" data-val-length-max="100" data-val-required="Password is required" id="Password" name="Password" placeholder="Password" type="password">
-                <label for="Password" class="show">Password</label>
-                <span class="field-validation-valid text-warning help-inline" data-valmsg-for="Password" data-valmsg-replace="true"></span>
-            </div>
-            <div hidden="hidden" id="browserInfo">
-                <input type="number" name="ScreenWidth" id="ScreenWidth" class="form-control">
-                <input type="number" name="ScreenHeight" id="ScreenHeight" class="form-control">
-                <input type="text" name="OSName" id="OSName" class="form-control">
-                <input type="text" name="InputType" id="InputType" class="form-control">
-            </div>
-            <div>
-                <button type="submit" class="btn btn-block btn-primary">
-                    <span class="submit-text">Login</span>
-                    <span class="submit-load"><span class="fa fa-spin fa-spinner"></span></span>
+            
+            <div class="form-group">
+                <button class="btn loginBtn" (click)="loginEvent()">
+                     <span>Login</span>
                 </button>
             </div>
-            <div class="form-group choose-language">
-                <label for="lang" class="control-label sr-only">Please choose your language</label>
-                <select id="lang" class="form-control inline">
-                            <option value="6" data-languid="3f44df11-7ae3-4406-af1b-8af2970c1bf0">Danish</option>
-                            <option value="9" data-languid="0040f0c9-b449-467d-8f6d-e48ad1776c57" selected="selected">English</option>
-                            <option value="1031" data-languid="45ccd89e-639f-400d-9328-da7abbbd27c5">German</option>
-                            <option value="1053" data-languid="b3d1a4cc-3032-4da6-bc41-12d17f96b36e">Swedish</option>
+            
+            <div class="form-group chooseLang">
+                <label for="lang" class="control-label sr-only">Sprog</label>
+                <select id="lang" class="form-control inline valid" aria-invalid="false">
+                            <option value="6" data-languid="3f44df11-7ae3-4406-af1b-8af2970c1bf0" selected="selected">Dansk</option>
                 </select>
-                <span class="field-validation-valid text-warning help-inline" data-valmsg-for="lang" data-valmsg-replace="true"></span>
             </div>
-        </div>
-        <div class="clearfix"></div>
-</form>        
+            <div class="clearfix"></div>     
 </div>
-
-
-
-
-                        
-                    </main>
-                </td>
-            </tr>
-        </tbody></table>
+</div>

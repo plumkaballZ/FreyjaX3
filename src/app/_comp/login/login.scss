@@ -1,43 +1,40 @@
 
-.login-box.loaded, html.lt-ie9 .login-box, html.no-js .login-box {
-    height: auto;
-    overflow: initial;
+.h_1{
+    color: #42556d;
 }
-.login-box {
-    position: relative;
+.loginBtn{
+ background: #ecd2a1;
+}
+.loginBox {
+    position: absolute;
+    margin: auto;
+    top: 15%;
+    right: 0;
+    left: 0;
     padding: 0 30px;
     display: inline-block;
     max-width: 380px;
     width: 100%;
     overflow: hidden;
-    height: 155px;
 }
-.login-container {
-    position: relative;
-    display: inline-block;
-    border: 3px solid #ed6c1e;
-    border: 3px solid rgba(237,106,28,.5);
-    background: #ecf0f1;
-    background: rgba(236,240,241,.8);
-    z-index: 2;
-}
-div {
-    display: block;
-}
-Style Attribute {
-    text-align: center;
-    vertical-align: middle;
-}
-td {
-    font-family: 'Open Sans', sans-serif;
-    color: #5e5e5e;
-    font-size: 13px;
-    font-weight: 600;
-    text-align: left;
-}
-.login-box .row {
+.row {
     margin: 40px auto 15px;
-    max-width: 300px;
-    width: 100%;
     text-align: center;
+}
+.chooseLang {
+    margin: 15px 0;
+}
+.chooseLang .form-control.form-control {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    display: inline;
+    width: auto;
+    border-color: transparent;
+    border-bottom-color: rgba(0,0,0,.5);
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0 12px;
+    height: 25px;
+    color: #ecd2a1;
+     background: #42556d;
 }
