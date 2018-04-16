@@ -27,6 +27,7 @@ export class LoginComp {
             if(userLogin) {
                 let tokenManager:userLoginManager = new userLoginManager();
                 tokenManager.saveUser(userLogin);
+                window.location.reload();
             }
         });
       }

@@ -8,9 +8,9 @@ export class authGuard implements CanActivate {
     constructor(private router: Router){}
     
     canActivate() {
-        
+
         let tokenManager:userLoginManager = new userLoginManager();
-        
+
         if(tokenManager.hasAccsess) return true
         
         this.router.navigate(['/login']);

@@ -1,25 +1,21 @@
 import { Type } from '@angular/core';
 
-export abstract class webCtrll
-{
+export abstract class webCtrll {
     generateUrl(){
-        return 'http://localhost:56757/MarkIArmor/';
+        return 'http://localhost:56757/MarkI/';
     }
 }
-export class warpCtrll extends webCtrll
-{
+export class warpCtrll extends webCtrll {
     generateUrl(): string {
         return super.generateUrl() + 'WARP';
     }
 }
-export class warpWebRequest
-{
+export class warpWebRequest {
     public jsonData: string;
     public dbRequest: warpDBRequest;
     
-    constructor() {
-    }
-
+    constructor() { }
+    
     userLogin_login(id : string, pw: string)
     {
         var paramzDic = new ParamzDic();
@@ -49,7 +45,7 @@ export class warpDBRequest {
         this._paramzDic = paramzDic; 
     }
 }
-enum DTOTypes{
+enum DTOTypes {
     userLogin
 }
 export class ParamzDic {
