@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { WebShooter } from './../../_service/SpiderMan'
 import { warpCtrll, warpWebRequest } from './../../_service/IronSpiderArmor'
 import { userLogin } from './../../_model/userLogin'
@@ -11,19 +12,17 @@ import { userLoginManager } from './../../_logic/auth/userLoginManager';
   })
 
 export class LoginComp {
+    _id: string;
+    _password: string;
     _webShooter: WebShooter;
 
     constructor(webShooter : WebShooter) {
         this._webShooter = webShooter;
-        this.login();
       }
 
-    login() {
-        console.log('login()');
-        this._webShooter.post(new warpCtrll(), new warpWebRequest().userLogin_login('dragonland', 'powerMetal9000')).subscribe(data => {
-            
+    public loginEvent() {
+        this._webShooter.post(new warpCtrll(), new warpWebRequest().userLogin_login(this._id, this._password)).subscribe(data => {
             let userLogin : userLogin = JSON.parse(data);
-            
             if(userLogin) {
                 let tokenManager:userLoginManager = new userLoginManager();
                 tokenManager.saveUser(userLogin);

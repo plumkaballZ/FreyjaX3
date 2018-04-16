@@ -1,0 +1,40 @@
+
+.h_1{
+    color: #42556d;
+}
+.loginBtn{
+ background: #ecd2a1;
+}
+.loginBox {
+    position: absolute;
+    margin: auto;
+    top: 15%;
+    right: 0;
+    left: 0;
+    padding: 0 30px;
+    display: inline-block;
+    max-width: 380px;
+    width: 100%;
+    overflow: hidden;
+}
+.row {
+    margin: 40px auto 15px;
+    text-align: center;
+}
+.chooseLang {
+    margin: 15px 0;
+}
+.chooseLang .form-control.form-control {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    display: inline;
+    width: auto;
+    border-color: transparent;
+    border-bottom-color: rgba(0,0,0,.5);
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0 12px;
+    height: 25px;
+    color: #ecd2a1;
+     background: #42556d;
+}

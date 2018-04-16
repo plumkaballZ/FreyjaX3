@@ -2,7 +2,11 @@ import { Type } from '@angular/core';
 
 export abstract class webCtrll {
     generateUrl(){
+<<<<<<< HEAD
         return 'http://localhost:56757/MarkI/';
+=======
+        return 'http://localhost:53417/MarkIArmor/';
+>>>>>>> 5538f43e03d59e3682d439cb9b998edc314a6fb2
     }
 }
 export class warpCtrll extends webCtrll {

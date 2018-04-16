@@ -1,32 +1,39 @@
+<navbarComp></navbarComp>
 
-<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Great+Vibes|Satisfy" rel="stylesheet">
+ <div class="row">
 
-<div class="overlay_Div">
-   
-    <div class="center_Div">
-        <div class="doomCount_Div">
-            <h1>
-                <doomCounterComp _trialEndsAt="2018-08-11 13:00"></doomCounterComp>
-            </h1>
+
+     <section class="col-md-12 leading">
+
+        <div class="doomCenter">
+            <div class="doomCounter"><h1><doomCounterComp _trialEndsAt="2018-08-11 13:00"></doomCounterComp></h1></div>
+            <p class="pContact"><a a routerLink="/contact" routerLinkActive="active" class="contactBtn">Skriv til os</a></p>
         </div>
-        <p class="p_001"><a a routerLink="/contact" routerLinkActive="active" class="contact_Btn">Skriv til os</a></p>
-    </div>
-</div>
-{{bla}}
-<div class="section group">
-    <div class="col span_1_of_3">
+      </section>
+
+    
+  </div>
+ <div class="row secRow">
+     <div class="col-md-4">
         <h1>Hvornår skal vi giftes?</h1>
-        <h2 class="h2_z">2018-08-11 13:00</h2>
-        
-        <div class="date_picker_div">
-            <!-- <material-datepicker (date)="2018-08-11"></material-datepicker> -->
+        <h2 class="h002">2018-08-11 13:00</h2>
+
+        <div class="datePicker">
+            <input matInput [matDatepicker]="myDatepicker">
+            <mat-datepicker  #myDatepicker opened="true" (date)="2018-08-11" ></mat-datepicker>          
+            <!-- <material-datepicker (focus)="picker.open()" (date)="2018-08-11"></material-datepicker> -->
+            <!-- <md-input-container>
+                <input mdInput [mdDatepicker]="picker" [(ngModel)]="myDate">
+                <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
+            </md-input-container>
+            
+            <md-datepicker #picker></md-datepicker> -->
         </div>
 
     </div>
-    <div class="col span_1_of_3">
+     <div class="col-md-4">
         <h1>Hvor skal vi giftes?</h1>
-        <h2 class="h2_z">Grenaa Sogn</h2>
+        <h2 class="h002">Grenaa Sogn</h2>
         <div class="secDiv">Address: Torvet 12, 8500 Grenå <br>
             Phone: 86 32 14 15 <br>
         </div>
@@ -36,10 +43,9 @@
         </div>
 
     </div>
-    
-    <div class="col span_1_of_3">
+    <div class="col-md-4">
         <h1>Hvor skal festen være?</h1>
-        <h2 class="h2_z">Hotel Grenaa - Havlund</h2>
+        <h2 class="h002">Hotel Grenaa - Havlund</h2>
         <div class="secDiv">
             Address: Kystvej 1, 8500 Grenå <br>
             Phone: 86 32 26 77 <br>
@@ -49,4 +55,4 @@
             <!-- <googleMapsComp [lat]="56.39857" [lng]="10.916191"></googleMapsComp> -->
         </div>
     </div>
-</div>
+  </div>
