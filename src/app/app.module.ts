@@ -9,14 +9,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //import comps
 import { NavbarComp } from './_comp/navbar/navbar.comp'
-
 import { DashComp } from './_comp/dash/dash.comp'
 import { DoomCounterComp } from './_comp/dash/doomCounter/doomCounter.comp'
-
 import { MoreInfoComp } from './_comp/moreInfo/moreInfo.comp'
 import { PiczComp } from './_comp/picz/picz.comp'
 import { ContactComp } from './_comp/contact/contact.comp'
 import { _404Comp } from './_comp/_404/_404.comp'
+import { GoogleMapsComp } from './_comp/googleMaps/googleMaps.comp'
 import { LoginComp } from './_comp/login/login.comp'
 
 //import services
@@ -25,6 +24,9 @@ import { WebShooter } from './_service/SpiderMan'
 //import logics
 import { authGuard } from './_logic/auth/authGuard'
 import { anonGuard } from './_logic/auth/anonGuard'
+
+//3rd party stuff
+import { AgmCoreModule } from '@agm/core';
 
 
 
@@ -39,6 +41,7 @@ import { anonGuard } from './_logic/auth/anonGuard'
     ContactComp,
     PiczComp,
     _404Comp,
+    GoogleMapsComp,
     LoginComp
   ],
   imports: [
@@ -81,7 +84,8 @@ import { anonGuard } from './_logic/auth/anonGuard'
         path: '**', 
         component: _404Comp,
       },
-    ])
+    ]),
+    AgmCoreModule.forRoot()
   ],
   providers: [
     WebShooter,

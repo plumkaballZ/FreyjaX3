@@ -129,3 +129,24 @@
 .secRow{
      color: #ecd2a1;
 }
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;
+  }
+  
+  .cards {
+    max-width: 960px;
+    margin: 0 auto 30px;
+  }
+  
+  article {
+    position: relative;
+  }
+  
+  .article-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
