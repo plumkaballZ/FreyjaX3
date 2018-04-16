@@ -26,9 +26,6 @@ import { WebShooter } from './_service/SpiderMan'
 import { authGuard } from './_logic/auth/authGuard'
 import { anonGuard } from './_logic/auth/anonGuard'
 
-'matdatepciker ffs'
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 
 
 
@@ -45,10 +42,6 @@ import { MatNativeDateModule, MatFormFieldModule, MatInputModule } from '@angula
     LoginComp
   ],
   imports: [
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatFormFieldModule,
-    MatInputModule,
     BrowserModule,
     FormsModule,
     HttpModule,
