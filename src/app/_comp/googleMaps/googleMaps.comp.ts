@@ -3,12 +3,7 @@ import { NgModule, Component, OnInit, Input  } from '@angular/core';
 
 @Component({
   selector: 'googleMapsComp',
-  styles: [`
-    agm-map {
-      height: 300px;
-      width: 540px;
-    }
-  `],
+  styleUrls: ['./googleMaps.scss'],
   templateUrl:'./googleMaps.html',
 })
 

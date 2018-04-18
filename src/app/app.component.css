@@ -1,4 +1,4 @@
 #pageWrapper {
-       width: 100%;
-       height: calc(100vh - 50px);
+       width: 99%;
+       min-height: calc(100vh);
 }

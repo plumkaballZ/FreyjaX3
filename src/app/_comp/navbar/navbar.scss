@@ -13,7 +13,6 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
 }
 .active {
     background-color: #CBA27A;
@@ -87,4 +86,12 @@ li.dropdown {
 .dropdown-content a:hover {background-color: #CBA27A}
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.navbarColor{
+      background-color: #ecd2a1;
+}
+.az_001{
+    font-family: fantasy;
+    font-size: 15px;
 }

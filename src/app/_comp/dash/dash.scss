@@ -86,7 +86,6 @@
     text-transform: uppercase;
     margin-right: 4px;
     margin-bottom: 4px;
-    font-family: "Work Sans", Arial, sans-serif;
     font-size: 20px;
     font-weight: 400;
     -webkit-border-radius: 30px;
@@ -96,8 +95,8 @@
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
-    font-family: 'Lato', sans-serif;
     color: #ecd2a1;
+    font-family: monospace;
 }
 
 .doomCenter {
@@ -119,7 +118,7 @@
   }
 }
 .leading {
-  height: 480px;
+  height: 410px;
   margin-bottom: 30px;
   padding: 30px;
   background: url('https://freyjax3-e0639.firebaseapp.com/assets/pic001.png') center #333 no-repeat;
@@ -128,16 +127,15 @@
 }
 .secRow{
      color: #ecd2a1;
+     text-align: center;
 }
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 30px;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    // grid-gap: 30px;
   }
-  
   .cards {
     max-width: 960px;
-    margin: 0 auto 30px;
   }
   
   article {
@@ -145,8 +143,20 @@
   }
   
   .article-img {
-    height: 200px;
-    width: 100%;
+    height: 265px;
     object-fit: cover;
   }
   
+  .h1z{
+    font-size: 62px;
+    margin-top: -11px;
+    margin-bottom: -21px;
+    font-family: 'Tangerine', cursive;
+  }
+  .h2z{
+       font-family: fantasy;
+    font-size: 25px;
+  }
+  .secDiv{
+    font-family: monospace;
+  }

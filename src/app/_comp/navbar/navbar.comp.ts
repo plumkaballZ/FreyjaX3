@@ -12,22 +12,22 @@ export class NavbarComp {
     navList = [
         {
         "id": 1,
-        "name": "FrontPage", 
+        "name": "Forside", 
         "link": '/dash'
         },
         {
         "id": 2,
-        "name": "MoreInfo", 
+        "name": "Mere info", 
         "link": '/moreInfo'
         },
         {
           "id": 3,
-          "name": "Picz", 
+          "name": "Billeder", 
           "link": '/picz'
         },
         {
         "id": 4,
-        "name": "Contact",
+        "name": "Kontakt os",
         "link": '/contact'
         }
       ];

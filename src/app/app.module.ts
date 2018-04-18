@@ -85,7 +85,9 @@ import { AgmCoreModule } from '@agm/core';
         component: _404Comp,
       },
     ]),
-    AgmCoreModule.forRoot()
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDUCm2GKf6Vw1eMkg2B3wcq6JXEv0fd6T8'
+    })
   ],
   providers: [
     WebShooter,

@@ -13,5 +13,7 @@ import { userLoginManager } from './../../_logic/auth/userLoginManager';
   
   export class DashComp {
     constructor(webShooter : WebShooter) {
+      //  let tokenManager:userLoginManager = new userLoginManager();
+      //  tokenManager.removeUser();
      }
   }
