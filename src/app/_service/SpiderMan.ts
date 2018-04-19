@@ -17,7 +17,11 @@ import { webCtrll, warpWebRequest} from './IronSpiderArmor';
 
         return this.http.get(controller.generateUrl(), this.requestOptions(options))
             .catch(this.onCatch.bind(this))
-            .do((res: any) => { console.log('do') }, (error: any) => { console.log('error') })
+            .do((res: any) => { 
+                if(res.status < 200 || res.status >= 300) {
+                    throw new Error('This request has failed ' + res.status);
+                  } 
+             }, (error: any) => { console.log('error') })
             .map((res: any) =>  {
                 return res.json();
               })
@@ -33,7 +37,11 @@ import { webCtrll, warpWebRequest} from './IronSpiderArmor';
 
         return this.http.post(controller.generateUrl(), body, this.requestOptions(options))
         .catch(this.onCatch.bind(this))
-        .do((res: any) => { console.log('do') }, (error: any) => { console.log('error') })
+        .do((res: any) => {
+            if(res.status < 200 || res.status >= 300) {
+                throw new Error('This request has failed ' + res.status);
+              }
+             }, (error: any) => { console.log('error') })
         .map((res: any) =>  {
             return res.json();
           })

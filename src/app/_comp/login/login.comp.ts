@@ -22,12 +22,20 @@ export class LoginComp {
 
     public loginEvent() {
         this._webShooter.post(new warpCtrll(), new warpWebRequest().userLogin_login(this._id, this._password)).subscribe(data => {
+            
             let userLogin : userLogin = JSON.parse(data);
+
             if(userLogin) {
+                
                 let tokenManager:userLoginManager = new userLoginManager();
                 tokenManager.saveUser(userLogin);
+
+                this._webShooter.post(new warpCtrll(), new warpWebRequest().loginLogCreate(userLogin.uid)).subscribe(data => {});   
+
                 window.location.reload();
             }
+        }, err => {
+            console.log('err');
         });
       }
   }

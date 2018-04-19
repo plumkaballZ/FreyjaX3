@@ -1,9 +1,10 @@
-
 .h_1{
     color: #42556d;
 }
 .loginBtn{
- background: #ecd2a1;
+    background: #42556d;
+    font-family: monospace;
+    font-size: 20px;
 }
 .loginBox {
     position: absolute;
@@ -31,10 +32,24 @@
     width: auto;
     border-color: transparent;
     border-bottom-color: rgba(0,0,0,.5);
-    background-color: transparent;
     box-shadow: none;
     padding: 0 12px;
     height: 25px;
     color: #ecd2a1;
      background: #42556d;
+}
+.loginContainer {
+    position: relative;
+    display: inline-block;
+    border: 3px solid #ecd2a1;
+    background: #2b3746 ;
+    z-index: 2;
+}
+.clearfix{
+    margin-top: 25px;
+}
+.inpt{
+    color: #42556d;
+    font-family: monospace;
+    font-size: 15px;
 }
