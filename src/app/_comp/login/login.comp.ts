@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { WebShooter } from './../../_service/SpiderMan'
 import { warpCtrll, warpWebRequest } from './../../_service/IronSpiderArmor'
 import { userLogin } from './../../_model/userLogin'
@@ -26,12 +25,9 @@ export class LoginComp {
             let userLogin : userLogin = JSON.parse(data);
 
             if(userLogin) {
-                
                 let tokenManager:userLoginManager = new userLoginManager();
+                userLogin.pw = this._password;
                 tokenManager.saveUser(userLogin);
-
-                this._webShooter.post(new warpCtrll(), new warpWebRequest().loginLogCreate(userLogin.uid)).subscribe(data => {});   
-
                 window.location.reload();
             }
         }, err => {

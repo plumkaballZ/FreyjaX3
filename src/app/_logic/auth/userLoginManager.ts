@@ -9,7 +9,7 @@ export class userLoginManager {
         userLogin.savedAt = (new Date()).getTime() + 100;
         localStorage.setItem(this.tokenKey, JSON.stringify(userLogin));
     }
-    private getUser() : userLogin {
+    public getUser() : userLogin {
         return JSON.parse(localStorage.getItem(this.tokenKey)) as userLogin;
     }
     public removeUser() {
@@ -24,7 +24,6 @@ export class userLoginManager {
          catch(err) {
              console.error(err);
          }
-
         return false;
     }
 }

@@ -96,4 +96,13 @@ import { webCtrll, warpWebRequest} from './IronSpiderArmor';
         console.log(options);
         return options;
     }
+     public getIpCliente(): Observable<any> {
+         return this.http.get('http://api.ipify.org/?format=jsonp&callback=JSONP_CALLBACK') 
+         .map((res:any) => {
+             let ipVar = res.text();
+             let num = ipVar.indexOf(":");
+             let num2 = ipVar.indexOf("\"});");
+             ipVar = ipVar.slice(num+2, num2);
+             return ipVar.toString(); }); 
+  }
 }

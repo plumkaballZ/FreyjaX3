@@ -14,7 +14,7 @@ export class anonGuard implements CanActivate {
             this.router.navigate(['/dash']);
             return false
         }
-
+        
         return true;
       }
 }
