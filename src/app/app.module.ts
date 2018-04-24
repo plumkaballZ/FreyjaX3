@@ -17,6 +17,7 @@ import { ContactComp } from './_comp/contact/contact.comp'
 import { _404Comp } from './_comp/_404/_404.comp'
 import { GoogleMapsComp } from './_comp/googleMaps/googleMaps.comp'
 import { LoginComp } from './_comp/login/login.comp'
+import { flagSelectComp } from './_comp/_util/flagSelect/flagSelect.comp'
 
 //import services
 import { WebShooter } from './_service/SpiderMan'
@@ -42,7 +43,8 @@ import { AgmCoreModule } from '@agm/core';
     PiczComp,
     _404Comp,
     GoogleMapsComp,
-    LoginComp
+    LoginComp,
+    flagSelectComp
   ],
   imports: [
     BrowserModule,
