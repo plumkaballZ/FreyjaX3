@@ -8,12 +8,12 @@ import { userLoginManager } from './../../_logic/auth/userLoginManager';
     selector: 'dashComp',
     templateUrl: './dash.html',
     styleUrls: ['./dash.scss'],
-     encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None
   })
   
   export class DashComp {
     constructor(webShooter : WebShooter) {
-      //  let tokenManager:userLoginManager = new userLoginManager();
-      //  tokenManager.removeUser();
+      // let tokenManager:userLoginManager = new userLoginManager();
+      //   tokenManager.removeUser();
      }
   }

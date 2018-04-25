@@ -18,11 +18,14 @@ constructor() {
     if(localFlag) this.localFlag = localFlag;
 }
 ngOnInit() {
+    
 }
 saveFlag(flag : string){
     if(this.localFlag != flag){
-        // localStorage.setItem('localFlag', flag);
-        // location.reload();
+        setTimeout(()=>{
+            localStorage.setItem('localFlag', flag);
+            location.reload();
+        }, 500);
     }
 }
 }
