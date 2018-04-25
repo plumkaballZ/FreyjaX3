@@ -1,6 +1,7 @@
 <div>
-    <div *ngFor="let falg of flagArray">
-        <input (click)="clickEvt($event.target)" class="hiddenCheckBox" type="checkbox" id="{{falg}}" />
-        <label for="{{falg}}"><img class="smallFlag" src="http://localhost:4200/assets/flag-icon-css-master/flags/4x3/{{falg}}.svg" /></label>
+     
+    <div *ngFor="let flag of flagArray">
+        <input (click)="saveFlag(flag)" [checked]="flag === localFlag" class="hiddenCheckBox" type="checkbox" id="{{flag}}" />
+        <label for="{{flag}}"><img class="smallFlag" src="https://marenogervin.dk/assets/flag-icon-css-master/flags/4x3/{{flag}}.svg" /></label>
     </div>
 </div>

@@ -10,12 +10,19 @@ import {Component, OnInit, Input} from '@angular/core';
 export class flagSelectComp implements OnInit {
 
 @Input() flagArray;
+public localFlag: string;
 
 constructor() {
+    this.localFlag = 'dk';
+    var localFlag = localStorage.getItem('localFlag');
+    if(localFlag) this.localFlag = localFlag;
 }
 ngOnInit() {
 }
-clickEvt(data) {
-    console.log(data);
-  }
+saveFlag(flag : string){
+    if(this.localFlag != flag){
+        // localStorage.setItem('localFlag', flag);
+        // location.reload();
+    }
+}
 }
