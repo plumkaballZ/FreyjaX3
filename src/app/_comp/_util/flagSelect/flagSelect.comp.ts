@@ -8,24 +8,35 @@ import {Component, OnInit, Input} from '@angular/core';
 })
 
 export class flagSelectComp implements OnInit {
-
-@Input() flagArray;
-public localFlag: string;
-
-constructor() {
-    this.localFlag = 'dk';
-    var localFlag = localStorage.getItem('localFlag');
-    if(localFlag) this.localFlag = localFlag;
-}
-ngOnInit() {
+    @Input() FlagsArray;
+    public localFlag: string;
+    public _flagsArray: any;
     
-}
-saveFlag(flag : string){
-    if(this.localFlag != flag){
-        setTimeout(()=>{
-            localStorage.setItem('localFlag', flag);
-            location.reload();
-        }, 500);
+    constructor() {
     }
-}
+
+    ngOnInit() {
+        this.localFlag = 'dk';
+        var localFlag = localStorage.getItem('localFlag');
+        if(localFlag) this.localFlag = localFlag;
+
+        this._flagsArray = [];
+        
+        this.FlagsArray.forEach(element => {
+            this._flagsArray.push({lang: element, checked: ((element == localFlag) ? true : false)}) 
+        });
+    }
+    saveFlag(flag : string) {
+        
+        this._flagsArray.forEach(element => {
+            if(element.lang != flag) element.checked = false;
+        });
+        
+        if(this.localFlag != flag){
+            setTimeout(()=> {
+                localStorage.setItem('localFlag', flag);
+                location.reload();
+            }, 500);
+        }
+    }
 }
