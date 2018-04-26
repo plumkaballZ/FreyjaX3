@@ -8,16 +8,16 @@
             <div id="Errors" class="xs-pt-6"></div>
             
             <div class="form-group">
-                <input class="inpt" [(ngModel)]="_id" placeholder="{{ 'loginComp.userName' | translate:param }}" type="text"/>
+                <input class="inpt" [(ngModel)]="_id" placeholder="{{ 'loginComp.userName' | translate }}" type="text"/>
             </div>
             
             <div class="form-group">
-                <input class="inpt" type="_password" (keydown.enter)="loginEvent()" [(ngModel)]="_password" placeholder="{{ 'loginComp.pw' | translate:param }}" type="password"/>
+                <input class="inpt" type="_password" (keydown.enter)="loginEvent()" [(ngModel)]="_password" placeholder="{{ 'loginComp.pw' | translate }}" type="password"/>
             </div>
             
             <div class="form-group">
                 <button class="btn loginBtn" (click)="loginEvent()">
-                     <span>{{ 'loginComp.login' | translate:param }}</span>
+                     <span>{{ 'loginComp.login' | translate }}</span>
                 </button>
             </div>
 

@@ -3,6 +3,7 @@ import { WebShooter } from './../../_service/SpiderMan'
 import { warpCtrll, warpWebRequest } from './../../_service/IronSpiderArmor'
 import { userLogin } from './../../_model/userLogin'
 import { userLoginManager } from './../../_logic/auth/userLoginManager';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
     selector: 'dashComp',
@@ -12,8 +13,11 @@ import { userLoginManager } from './../../_logic/auth/userLoginManager';
   })
   
   export class DashComp {
-    constructor(webShooter : WebShooter) {
+    private translate: TranslateService;
+    
+    constructor(webShooter : WebShooter, translate: TranslateService) {
       // let tokenManager:userLoginManager = new userLoginManager();
       //   tokenManager.removeUser();
+      this.translate = translate;
      }
   }
