@@ -1,7 +1,11 @@
 //core stuff
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
+
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+
 import { RouterModule } from '@angular/router';
 import { HttpModule, XHRBackend, RequestOptions, Http } from '@angular/http';
 import { AppComponent } from './app.component';
@@ -30,8 +34,9 @@ import { anonGuard } from './_logic/auth/anonGuard'
 //3rd party stuff
 import { AgmCoreModule } from '@agm/core';
 
-
-
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -49,7 +54,14 @@ import { AgmCoreModule } from '@agm/core';
   ],
   imports: [
     BrowserModule,
-    TranslateModule.forRoot(),
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: (createTranslateLoader),
+          deps: [HttpClient]
+      }
+    }),
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,

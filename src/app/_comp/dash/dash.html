@@ -7,7 +7,7 @@
 
         <div class="doomCenter">
             <div class="doomCounter"><h1><doomCounterComp _trialEndsAt="2018-08-11 13:00"></doomCounterComp></h1></div>
-            <p class="pContact"><a a routerLink="/contact" routerLinkActive="active" class="contactBtn">Skriv til os</a></p>
+            <p class="pContact"><a a routerLink="/contact" routerLinkActive="active" class="contactBtn">{{ 'dashComp.contactUs' | translate:param }}</a></p>
         </div>
       </section>
 
@@ -15,10 +15,9 @@
   </div>
  <div class="row secRow">
      <div class="col-md-4">
-        <h1 class="h1z">Hvornår skal vi giftes?</h1>
-        <h2 class="h2z">11.08.2018 kl. 13:00</h2>
-
-        <div class="secDiv">AUGUST 2018 <br>
+        <h1 class="h1z">{{ 'dashComp.row1hz1' | translate:param }}</h1>
+        <h2 class="h2z">{{ 'dashComp.row1hz2' | translate:param }}</h2>
+        <div class="secDiv">{{ 'dashComp.row1SecDiv' | translate:param }}<br>
         </div>
         <section class="cards">
             <article>
@@ -29,11 +28,11 @@
 
      <div class="col-md-4">
 
-        <h1 class="h1z">Hvor skal vi giftes?</h1>
-        <h2 class="h2z">Grenaa Kirke</h2>
+        <h1 class="h1z">{{ 'dashComp.row2hz1' | translate:param }}</h1>
+        <h2 class="h2z">{{ 'dashComp.row2hz2' | translate:param }}</h2>
 
-        <div class="secDiv">Address: Torvet 12, 8500 Grenå <br>
-            Phone: 86 32 14 15 <br>
+        <div class="secDiv"> {{ 'dashComp.row2SecDiv' | translate:param }}<br>
+            {{ 'dashComp.row2SecDiv2' | translate:param }}<br>
         </div>
 
         <section class="cards">
@@ -47,12 +46,12 @@
     </div>
 
     <div class="col-md-4">
-        <h1 class="h1z">Hvor skal festen være?</h1>
-        <h2 class="h2z">Hotel Grenaa - Havlund</h2>
+        <h1 class="h1z">{{ 'dashComp.row3hz1' | translate:param }}</h1>
+        <h2 class="h2z">{{ 'dashComp.row3hz2' | translate:param }}</h2>
         
         <div class="secDiv">
-            Address: Kystvej 1, 8500 Grenå <br>
-            Phone: 86 32 26 77 <br>
+                {{ 'dashComp.row3SecDiv' | translate:param }}<br>
+                {{ 'dashComp.row3SecDiv2' | translate:param }}<br>
         </div>
         
         <section class="cards">

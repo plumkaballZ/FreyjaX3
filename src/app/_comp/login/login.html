@@ -1,26 +1,27 @@
 <div class="row">
     <h1 class="h_1">MarenOgErvin.dk</h1>
 </div>
+
 <div class="row">
     <div class="loginBox loginContainer">
         <div class="clearfix"></div>
             <div id="Errors" class="xs-pt-6"></div>
             
             <div class="form-group">
-                <input class="inpt" [(ngModel)]="_id" placeholder="Brugernavn" type="text"/>
+                <input class="inpt" [(ngModel)]="_id" placeholder="{{ 'loginComp.userName' | translate:param }}" type="text"/>
             </div>
             
             <div class="form-group">
-                <input class="inpt" type="_password" (keydown.enter)="loginEvent()" [(ngModel)]="_password" placeholder="Adgangskode" type="password"/>
+                <input class="inpt" type="_password" (keydown.enter)="loginEvent()" [(ngModel)]="_password" placeholder="{{ 'loginComp.pw' | translate:param }}" type="password"/>
             </div>
             
             <div class="form-group">
                 <button class="btn loginBtn" (click)="loginEvent()">
-                     <span>Login</span>
+                     <span>{{ 'loginComp.login' | translate:param }}</span>
                 </button>
             </div>
 
             <flagSelectComp [FlagsArray]="['dk', 'ba']"></flagSelectComp>
             <div class="clearfix"></div>
-</div>
+        </div>
 </div>

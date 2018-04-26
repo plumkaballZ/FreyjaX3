@@ -3,6 +3,7 @@ import { userLoginManager } from './_logic/auth/userLoginManager';
 import { WebShooter } from './_service/SpiderMan'
 import { warpCtrll, warpWebRequest } from './_service/IronSpiderArmor'
 import { userLogin } from './_model/userLogin'
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ import { userLogin } from './_model/userLogin'
 
 export class AppComponent {
   title = 'app';
-  constructor(webShooter : WebShooter){
+  constructor(webShooter : WebShooter, translate: TranslateService){
     let tokenManager:userLoginManager = new userLoginManager();
     var user = tokenManager.getUser();
 
@@ -40,6 +41,10 @@ export class AppComponent {
         }, err => {
             console.log('err');
         });
-      } 
+      }
+      
+      var localFlag = localStorage.getItem('localFlag');
+      if(localFlag) translate.use(localFlag)
+      else translate.use('dk')
   }
 }

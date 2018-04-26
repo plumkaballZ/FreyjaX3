@@ -1,5 +1,33 @@
 {
     "loginComp" :{
-        "asdf" : "asdf_dk"
-    }  
+        "pw" : "Adganskode",
+        "userName" : "Brugernavn",
+        "login" : "Log på"
+    },
+    "dashComp" :{
+        "contactUs" : "Skrive til os :)",
+        "row1hz1" : "Hvornår skal vi giftes?",
+        "row1hz2" : "11.08.2018 kl. 13:00",
+        "row2hz1" : "Hvor skal vi giftes?",
+        "row2hz2" : "Grenaa Kirke",
+        "row3hz1" : "Hvor skal festen være?",
+        "row3hz2" : "Hotel Grenaa - Havlund",
+        "row1SecDiv": "AUGUST 2018",
+        "row2SecDiv" : "Address: Torvet 12, 8500 Grenå",
+        "row2SecDiv2" : "Tlf. 86 32 14 15",
+        "row3SecDiv" : "Address: Kystvej 1, 8500 Grenå",
+        "row3SecDiv2" : "Tlf. 86 32 26 77"
+    },
+    "doomCounterComp": {
+        "days" : "dage",
+        "hours" : "timer",
+        "minutes" : "minutter",
+        "seconds" : "sekunder"
+    },
+    "navbarComp" : {
+        "frontSide" : "Forside",
+        "moreInfo"  : "Mere info",
+        "picz" : "Billeder",
+        "contact" : "Kontakt os"
+    }
 }
