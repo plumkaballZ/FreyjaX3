@@ -1,6 +1,7 @@
 //core stuff
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { HttpModule, XHRBackend, RequestOptions, Http } from '@angular/http';
 import { AppComponent } from './app.component';
@@ -48,6 +49,7 @@ import { AgmCoreModule } from '@agm/core';
   ],
   imports: [
     BrowserModule,
+    TranslateModule.forRoot(),
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,

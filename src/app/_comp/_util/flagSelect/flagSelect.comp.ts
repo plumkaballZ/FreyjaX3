@@ -1,5 +1,6 @@
-import {Observable} from 'rxjs/Rx';
-import {Component, OnInit, Input} from '@angular/core';
+import { Observable } from 'rxjs/Rx';
+import { Component, OnInit, Input } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'flagSelectComp',
@@ -12,7 +13,10 @@ export class flagSelectComp implements OnInit {
     public localFlag: string;
     public _flagsArray: any;
     
-    constructor() {
+    private _transLat0r: TranslateService;
+
+    constructor(translate: TranslateService) {
+        this._transLat0r = translate;
     }
 
     ngOnInit() {
@@ -25,6 +29,7 @@ export class flagSelectComp implements OnInit {
         this.FlagsArray.forEach(element => {
             this._flagsArray.push({lang: element, checked: ((element == localFlag) ? true : false)}) 
         });
+        this._transLat0r.use(this.localFlag);
     }
     saveFlag(flag : string) {
         
