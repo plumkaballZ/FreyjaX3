@@ -1,5 +1,6 @@
 import { Observable } from 'rxjs/Rx';
 import { Component, OnInit, Input } from '@angular/core';
+import { copyConfig } from '@angular/router/src/config';
 
 @Component({
     selector: 'flagSelectComp',
@@ -12,14 +13,13 @@ export class flagSelectComp implements OnInit {
     public _localFlag: string;
     public _flagsArray: any;
 
-
     constructor() {
     }
 
     ngOnInit() {
         this._localFlag = 'dk';
         var localFlag = localStorage.getItem('localFlag');
-        
+
         if(localFlag) this._localFlag = localFlag;
 
         this._flagsArray = [];
@@ -29,7 +29,6 @@ export class flagSelectComp implements OnInit {
         });
     }
     saveFlag(flag : string) {
-        
         this._flagsArray.forEach(element => {
             if(element.lang != flag) element.checked = false;
         });
