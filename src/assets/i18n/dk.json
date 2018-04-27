@@ -29,5 +29,9 @@
         "moreInfo"  : "Mere info",
         "picz" : "Billeder",
         "contact" : "Kontakt os"
+    },
+    "404Comp" : {
+        "siteNotFound" : "siden blev ikke fundet :(",
+        "siteCommingSoon" : "siden kommer snart :)"
     }
 }
