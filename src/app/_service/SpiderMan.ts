@@ -30,12 +30,8 @@ import { webCtrll, warpWebRequest} from './IronSpiderArmor';
         }
 
     post(controller: webCtrll, warpRequest: warpWebRequest, options?: RequestOptionsArgs): Observable<any> {
-
         this.requestInterceptor();
-
         let body = JSON.stringify(warpRequest);
-
-        console.log(body);
         return this.http.post(controller.generateUrl(), body, this.requestOptions(options))
         .catch(this.onCatch.bind(this))
         .do((res: any) => {

@@ -2,7 +2,7 @@ import { Type } from '@angular/core';
 
 export abstract class webCtrll {
     generateUrl(){
-        return 'https://85.191.117.96/MarkI/';
+        return 'http://85.191.117.96/MarkI/';
     }
 }
 export class warpCtrll extends webCtrll {s
@@ -35,7 +35,7 @@ export class warpWebRequest {
 
         paramzDic['@userLoginUid'] = userLoginUid;
         paramzDic['@ip'] =  ip;
-        paramzDic['@systemUid'] =  'EF96A2F8-7848-4856-9485-8ED838B98127';
+        paramzDic['@systemUid'] =  this.sysUid;
         
         this.dbRequest = new warpDBRequest('loginLog_create', 'GetSingle', DTOTypes.userLogin, paramzDic);
 
