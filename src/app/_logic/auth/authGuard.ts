@@ -10,11 +10,10 @@ export class authGuard implements CanActivate {
     canActivate() {
 
         let tokenManager:userLoginManager = new userLoginManager();
-
-        return true;
-        // if(tokenManager.hasAccsess) return true
         
-        // this.router.navigate(['/login']);
-        // return false;
+        if(tokenManager.hasAccsess) return true
+        
+         this.router.navigate(['/login']);
+          return false;
       }
 }
