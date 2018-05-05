@@ -2,12 +2,12 @@ import { Type } from '@angular/core';
 
 export abstract class webCtrll {
     generateUrl(){
-        return 'https://ironwebservice.ddns.net/MarkI/';
+        return 'https://ironwebservice.ddns.net/marki/';
     }
 }
 export class warpCtrll extends webCtrll {s
     generateUrl(): string {
-        return super.generateUrl() + 'WARP';
+        return super.generateUrl() + 'warp';
     }
 }
 export class warpWebRequest {

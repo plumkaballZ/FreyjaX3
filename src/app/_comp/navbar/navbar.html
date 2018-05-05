@@ -10,7 +10,7 @@
   
       <ul class="col-md-6">
         <li *ngFor="let nav of navList" class="dropdown">
-          <a class="az_001" (click)="selectNav(nav)"href="javascript:void(0)">{{nav.name}}
+          <a [class.logOffBtn]="nav.id==99" class="az_001" (click)="selectNav(nav)"href="javascript:void(0)">{{nav.name}}
             <div class="dropdown-content">
               <a *ngFor="let childNav of nav.childNavList" class="az_001" (click)="selectNav(childNav)">{{childNav.name}}</a>
             </div>
@@ -20,6 +20,7 @@
 
       
       <flagSelectComp class="col-md-3" [FlagsArray]="['dk', 'ba', 'gb']"></flagSelectComp>
+   
     
   </div>
   

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { userLoginManager } from './../../_logic/auth/userLoginManager';
 
 @Component({
   selector: 'navbarComp',
@@ -29,7 +30,12 @@ export class NavbarComp {
         "id": 4,
         "name": "",
         "link": '/contact'
-        }
+        },
+        {
+          "id": 99,
+          "name": "",
+          "link": 'logOff'
+          }
       ];
     constructor(private router: Router, private translate: TranslateService) {
       this.translate.get('navbarComp.frontSide').subscribe((res: string) => {
@@ -44,8 +50,18 @@ export class NavbarComp {
       this.translate.get('navbarComp.contact').subscribe((res: string) => {
         this.navList[3].name = res;
       });
+      this.translate.get('navbarComp.logOff').subscribe((res: string) => {
+        this.navList[4].name = res;
+      }); 
     }
     selectNav(nav) {
+      if(nav.id == 99){
+        let tokenManager:userLoginManager = new userLoginManager();
+        tokenManager.removeUser();
+        window.location.reload();
+      }
+      else{
         this.router.navigateByUrl(nav.link);
       }
+    }
 }

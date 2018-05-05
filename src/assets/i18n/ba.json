@@ -16,7 +16,8 @@
         "row2SecDiv" : "Adresa: Torvet 12, 8500 Grenaa",
         "row2SecDiv2" : "Tel. +45 86 32 14 15",
         "row3SecDiv" : "Adresa: Kystvej 1, 8500 Grenaa",
-        "row3SecDiv2" : "Tel. +45 86 32 26 77"
+        "row3SecDiv2" : "Tel. +45 86 32 26 77",
+        "wishList" : "wishList"
     },
     "doomCounterComp": {
         "days" : "dana",
@@ -28,6 +29,7 @@
         "frontSide" : "Naslovna",
         "moreInfo"  : "Informacije",
         "picz" : "Slike",
-        "contact" : "Kontakt"
+        "contact" : "Kontakt",
+        "logOff" : "Odjaviti se"
     }
 }

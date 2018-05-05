@@ -31,7 +31,9 @@ import { webCtrll, warpWebRequest} from './IronSpiderArmor';
 
     post(controller: webCtrll, warpRequest: warpWebRequest, options?: RequestOptionsArgs): Observable<any> {
         this.requestInterceptor();
+
         let body = JSON.stringify(warpRequest);
+        
         return this.http.post(controller.generateUrl(), body, this.requestOptions(options))
         .catch(this.onCatch.bind(this))
         .do((res: any) => {
@@ -79,6 +81,9 @@ import { webCtrll, warpWebRequest} from './IronSpiderArmor';
     }
     private requestOptions(options?: RequestOptionsArgs): RequestOptionsArgs {
         
+        console.log('options before');
+        console.log(options);
+        
         if (options == null) {
             options = new RequestOptions();
         }
@@ -90,7 +95,7 @@ import { webCtrll, warpWebRequest} from './IronSpiderArmor';
               });
         }
 
-        console.log('options:');
+        console.log('options after');
         console.log(options);
         return options;
     }
