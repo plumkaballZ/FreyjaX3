@@ -2,7 +2,7 @@ import { Type } from '@angular/core';
 
 export abstract class webCtrll {
     generateUrl(){
-        return 'http://localhost:5000/MarkI/';
+        return 'http://localhost:53417/MarkI/';
     }
 }
 export class warpCtrll extends webCtrll {s
