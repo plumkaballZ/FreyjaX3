@@ -30,14 +30,12 @@ import { webCtrll, warpWebRequest} from './IronSpiderArmor';
         }
 
     post(controller: webCtrll, warpRequest: warpWebRequest, options?: RequestOptionsArgs): Observable<any> {
-
         this.requestInterceptor();
-
         let body = JSON.stringify(warpRequest);
-
         return this.http.post(controller.generateUrl(), body, this.requestOptions(options))
         .catch(this.onCatch.bind(this))
         .do((res: any) => {
+            console.log(res);
             if(res.status < 200 || res.status >= 300) {
                 throw new Error('This request has failed ' + res.status);
               }

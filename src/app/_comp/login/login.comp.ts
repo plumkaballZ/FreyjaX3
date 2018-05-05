@@ -31,6 +31,7 @@ export class LoginComp {
                 window.location.reload();
             }
         }, err => {
+            console.log(err);
             console.log('err');
         });
       }
