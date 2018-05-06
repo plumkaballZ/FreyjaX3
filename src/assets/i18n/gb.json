@@ -16,7 +16,8 @@
         "row2SecDiv" : "Address: Torvet 12, 8500 Grenå",
         "row2SecDiv2" : "Phone: 86 32 14 15",
         "row3SecDiv" : "Address: Kystvej 1, 8500 Grenå",
-        "row3SecDiv2" : "Tlf: 86 32 26 77"
+        "row3SecDiv2" : "Tlf: 86 32 26 77",
+        "wishList" : "Click here to see our wishlist"
     },
     "doomCounterComp": {
         "days" : "days",
@@ -28,6 +29,7 @@
         "frontSide" : "Front page",
         "moreInfo"  : "More info",
         "picz" : "Pictures",
-        "contact" : "Contact us"
+        "contact" : "Contact us",
+        "logOff" : "Log off"
     }
 }
