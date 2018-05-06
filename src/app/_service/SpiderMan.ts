@@ -77,23 +77,17 @@ import { webCtrll, warpWebRequest} from './IronSpiderArmor';
     private onCatch(error: any, caught: Observable<any>): Observable<any> {
         return Observable.of(error);        
     }
-    private requestOptions(options?: RequestOptionsArgs): RequestOptionsArgs {
-        
-        if (options == null) {
-            options = new RequestOptions();
-        }
-
-        if (options.headers == null) {
-            const user = localStorage.getItem('user') != "undefined" ? JSON.parse(localStorage.getItem('user')) : null;
-            options.headers = new Headers({
-                'Content-Type': 'application/json'
-              });
-        }
-
-        console.log('options:');
-        console.log(options);
-        return options;
+     private requestOptions(options?: RequestOptionsArgs): RequestOptionsArgs {
+    if (options == null) {
+      options = new RequestOptions();
     }
+    if (options.headers == null) { 
+      options.headers = new Headers({
+        'Content-Type': 'application/json'
+      });
+    }
+    return options;
+  }
      public getIpCliente(): Observable<any> {
          return this.http.get('https://api.ipify.org/?format=jsonp&callback=JSONP_CALLBACK') 
          .map((res:any) => {
