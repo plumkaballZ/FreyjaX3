@@ -79,16 +79,6 @@ import { webCtrll, warpWebRequest} from './IronSpiderArmor';
     private onCatch(error: any, caught: Observable<any>): Observable<any> {
         return Observable.of(error);        
     }
-<<<<<<< HEAD
-     private requestOptions(options?: RequestOptionsArgs): RequestOptionsArgs {
-    if (options == null) {
-      options = new RequestOptions();
-    }
-    if (options.headers == null) { 
-      options.headers = new Headers({
-        'Content-Type': 'application/json'
-      });
-=======
     private requestOptions(options?: RequestOptionsArgs): RequestOptionsArgs {
         
         console.log('options before');
@@ -108,10 +98,9 @@ import { webCtrll, warpWebRequest} from './IronSpiderArmor';
         console.log('options after');
         console.log(options);
         return options;
->>>>>>> f592eb4197d31fe9efa30f240b3cf02e58ab3639
     }
-    return options;
-  }
+   
+  
      public getIpCliente(): Observable<any> {
          return this.http.get('https://api.ipify.org/?format=jsonp&callback=JSONP_CALLBACK') 
          .map((res:any) => {

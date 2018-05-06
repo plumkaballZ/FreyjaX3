@@ -1,7 +1,7 @@
 .pContact{
     margin-top: 60px;
 }
-.contactBtn{
+.contactBtn {
     text-decoration: none;
     margin: 20px;
     padding: 15px 20px;
@@ -22,6 +22,11 @@
     color: #ecd2a1;
     font-family: monospace;
 }
+  @media (max-width: 800px) {
+    .contactBtn {
+        font-size: 12px;
+    }
+  }
 .doomCenter {
     padding-top: 60px;
     text-align: center;
@@ -44,6 +49,12 @@
 @media (max-width: 800px) {
   .leading {
     background: url('http://localhost:4200/assets/pic002.png') center #333 no-repeat;
+  }
+  .spacer800w{
+    margin-top: 150px;
+  }
+  .doomCenter{
+        padding-top: 0px;
   }
 }
 .leading {
