@@ -1,5 +1,6 @@
 .pContact{
     margin-top: 60px;
+    margin-bottom:  30px;
 }
 .contactBtn{
     text-decoration: none;
@@ -29,6 +30,16 @@
     margin: 10px auto;
     color: #ecd2a1;
 }
+@media (max-width: 800px) {
+  .doomCenter {
+    padding-top: 0px;
+    margin-top: -40px;
+  }
+  .pContact{
+    margin-top: 230px;
+    margin-bottom:  30px;
+}
+}
 .datePicker{
     top: 0.9em;
     left: -46px;
@@ -43,7 +54,8 @@
 }
 @media (max-width: 800px) {
   .leading {
-    background: url('http://localhost:4200/assets/pic002.png') center #333 no-repeat;
+    background: url('https://freyjax3-e0639.firebaseapp.com/assets/pic002.png') center #333 no-repeat;
+    background-size: contain !important;
   }
 }
 .leading {
