@@ -2,7 +2,7 @@
     margin-top: 60px;
     margin-bottom:  30px;
 }
-.contactBtn{
+.contactBtn {
     text-decoration: none;
     margin: 20px;
     padding: 15px 20px;
@@ -23,6 +23,11 @@
     color: #ecd2a1;
     font-family: monospace;
 }
+  @media (max-width: 800px) {
+    .contactBtn {
+        font-size: 12px;
+    }
+  }
 .doomCenter {
     padding-top: 60px;
     text-align: center;
@@ -55,7 +60,16 @@
 @media (max-width: 800px) {
   .leading {
     background: url('https://freyjax3-e0639.firebaseapp.com/assets/pic002.png') center #333 no-repeat;
+<<<<<<< HEAD
     background-size: contain !important;
+=======
+  }
+  .spacer800w{
+    margin-top: 150px;
+  }
+  .doomCenter{
+        padding-top: 0px;
+>>>>>>> 13956f2702baf7ec6325db97be6f5016ae2491ef
   }
 }
 .leading {
@@ -90,7 +104,7 @@
   }
   
   .h1z{
-    font-size: 52px;
+    font-size: 37px;
     // font-family: 'Tangerine', cursive;
     font-family: 'Dancing Script', cursive;
     line-height: 48px;

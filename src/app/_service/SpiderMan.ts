@@ -99,6 +99,8 @@ import { webCtrll, warpWebRequest} from './IronSpiderArmor';
         console.log(options);
         return options;
     }
+   
+  
      public getIpCliente(): Observable<any> {
          return this.http.get('https://api.ipify.org/?format=jsonp&callback=JSONP_CALLBACK') 
          .map((res:any) => {

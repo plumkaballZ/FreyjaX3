@@ -5,7 +5,7 @@ export abstract class webCtrll {
         return 'https://ironwebservice.ddns.net/marki/';
     }
 }
-export class warpCtrll extends webCtrll {s
+export class warpCtrll extends webCtrll {
     generateUrl(): string {
         return super.generateUrl() + 'warp';
     }
