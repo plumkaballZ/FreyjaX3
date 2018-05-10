@@ -1,14 +1,12 @@
 
 <div class="row navbarColor">
-
-  <div class="col-md-3">
-    <div class="col-xs-2">
-    </div>
+  
+  <div class="col-md-3 emptySpaceCol">
   </div>
 
   <div class="col-md-9">
   
-      <ul class="col-md-6">
+      <ul class="col-md-7 navListCol">
         <li *ngFor="let nav of navList" class="dropdown">
           <a [class.logOffBtn]="nav.id==99" class="az_001" (click)="selectNav(nav)"href="javascript:void(0)">{{nav.name}}
             <div class="dropdown-content">
@@ -18,10 +16,8 @@
         </li>
       </ul>
 
+      <flagSelectComp class="col-md-3 flagCol" [FlagsArray]="['dk', 'ba', 'gb']"></flagSelectComp>
       
-      <flagSelectComp class="col-md-3" [FlagsArray]="['dk', 'ba', 'gb']"></flagSelectComp>
-   
-    
   </div>
   
 </div>

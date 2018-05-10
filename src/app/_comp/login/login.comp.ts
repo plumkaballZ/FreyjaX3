@@ -32,7 +32,6 @@ export class LoginComp {
             }
         }, err => {
             console.log(err);
-            console.log('err');
         });
       }
   }

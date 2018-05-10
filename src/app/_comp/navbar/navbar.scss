@@ -1,106 +1,55 @@
+.navbarColor{
+    background-color: #ecd2a1;
+}
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #CBA27A;
+}
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
 }
 li {
     float: left;
 }
 li a {
-    display: block;
     color: #2F4259;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
 }
 .active {
     background-color: #CBA27A;
 }
-.text-right {
-    text-align: right;
-}
-.section {
-	clear: both;
-	padding: 0px;
-    margin: 0px;
-    margin-top: -10px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    background: #ecd2a1;
-    height: 45px;
-}
-.col {
-	display: block;
-	float:left;
-	margin: 0% 0 1% 5%;
-}
-.col:first-child { margin-left: 0; }
-
-.group:before,
-.group:after { content:""; display:table; }
-.group:after { clear:both;}
-.group { zoom:1; }
-
-.span_2_of_2 {
-	width: 47%;
-}
-.span_1_of_2 {
-	width: 44%;
-}
-._logo{
-    margin-left: 100px;
-    margin-top: 15px;
-}
 li a, .dropbtn {
     display: inline-block;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 1vw;
     text-decoration: none;
-}
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: #CBA27A;
-}
-li.dropdown {
-    display: inline-block;
-}
-.dropdown-content 
-{
-    margin-top: 11px;
-    display: none;
-    position: absolute;
-    background-color: #ecd2a1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-.dropdown-content a {
-    color: #2F4259;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-.dropdown-content a:hover {background-color: #CBA27A}
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.navbarColor{
-      background-color: #ecd2a1;
 }
 .az_001{
     font-family: fantasy;
     font-size: 15px;
 }
-.flagDiv{
-}
+
 .logOffBtn{
     background: #42556d;
     color: #CBA27A !important;
 }
 .logOffBtn:hover { 
     color: #2F4259 !important;
+}
+.emptySpaceCol {
+    width: 25%;
+    float: left;
+}
+@media (max-width: 615px) {
+    .flagCol {
+        width: 100%;
+        float: left;
+    }
+    .navListCol {
+        width: 100%;
+        float: left;
+    }
+    .emptySpaceCol{
+        width: 0%;
+        float: none;
+    }
 }

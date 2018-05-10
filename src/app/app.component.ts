@@ -30,7 +30,6 @@ export class AppComponent {
             webShooter.getIpCliente().subscribe(data => {
               webShooter.post(new warpCtrll(), new warpWebRequest().loginLog_log(userLogin.uid, data)).subscribe(data => {  
             }, err => {
-              console.log('err');
             });
           });
         }
@@ -39,7 +38,6 @@ export class AppComponent {
             window.location.reload();
           }
         }, err => {
-            console.log('err');
         });
       }
       

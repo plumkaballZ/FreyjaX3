@@ -35,8 +35,10 @@ export class NavbarComp {
           "id": 99,
           "name": "",
           "link": 'logOff'
-          }
+        }
       ];
+
+      
     constructor(private router: Router, private translate: TranslateService) {
       this.translate.get('navbarComp.frontSide').subscribe((res: string) => {
         this.navList[0].name = res;

@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   })
   export class ContactComp{
       constructor(){
-          console.log('contact ctor');
       }
     }

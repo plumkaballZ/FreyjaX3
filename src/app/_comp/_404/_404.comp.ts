@@ -4,6 +4,5 @@ import { Component } from '@angular/core';
 })
 export class _404Comp{
     constructor(){
-        console.log('404 ctor');
     }
 }

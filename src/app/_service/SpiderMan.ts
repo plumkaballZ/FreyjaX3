@@ -37,7 +37,6 @@ import { webCtrll, warpWebRequest} from './IronSpiderArmor';
         return this.http.post(controller.generateUrl(), body, this.requestOptions(options))
         .catch(this.onCatch.bind(this))
         .do((res: any) => {
-            console.log(res);
             if(res.status < 200 || res.status >= 300) {
                 throw new Error('This request has failed ' + res.status);
               }
@@ -79,11 +78,7 @@ import { webCtrll, warpWebRequest} from './IronSpiderArmor';
     private onCatch(error: any, caught: Observable<any>): Observable<any> {
         return Observable.of(error);        
     }
-    private requestOptions(options?: RequestOptionsArgs): RequestOptionsArgs {
-        
-        console.log('options before');
-        console.log(options);
-        
+    private requestOptions(options?: RequestOptionsArgs): RequestOptionsArgs {  
         if (options == null) {
             options = new RequestOptions();
         }
@@ -94,9 +89,6 @@ import { webCtrll, warpWebRequest} from './IronSpiderArmor';
                 'Content-Type': 'application/json'
               });
         }
-
-        console.log('options after');
-        console.log(options);
         return options;
     }
    
